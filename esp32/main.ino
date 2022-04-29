@@ -29,3 +29,27 @@ short vcc_readings[30];
 short measure_count = 0;
 unsigned long last_measure_time = 0;
 unsigned long finished_setup_time = 0;
+
+// Connect to WiFi network and print ip address
+void connect_to_wifi(){
+    Serial.println("Connecting to WiFi...");
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    // Wait for connection
+    while (WiFi.status() != WL_CONNECTED) {
+        Serial.println("Could not connect to WiFi. Retrying in 5 seconds...");
+        delay(500);
+        Serial.print(".");
+    }
+    // If connected, print ip address
+    if(WiFi.status() == WL_CONNECTED){
+        Serial.println("Connected to WiFi!");
+        print_ip_address();
+    }   
+}
+
+void setup(){
+    // Initialize serial
+    Serial.begin(115200);
+    // Connect to WiFi
+    connect_to_wifi();    
+}
