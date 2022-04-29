@@ -7,7 +7,11 @@ const char *WIFI_SSID = "network_name";
 const char *WIFI_PASSWORD = "network_password";
 
 // Create instance of emonLib library
-EnergyMonitor emon1;
+EnergyMonitor module_1;
+EnergyMonitor module_2;
+EnergyMonitor module_3;
+EnergyMonitor module_4;
+EnergyMonitor module_5;
 
 // Define ADC inputs
 const int ADC_PIN_1 = 30;
@@ -30,6 +34,7 @@ short measure_count = 0;
 unsigned long last_measure_time = 0;
 unsigned long finished_setup_time = 0;
 
+
 // Connect to WiFi network and print ip address
 void connect_to_wifi(){
     Serial.println("Connecting to WiFi...");
@@ -51,5 +56,23 @@ void setup(){
     // Initialize serial
     Serial.begin(115200);
     // Connect to WiFi
-    connect_to_wifi();    
+    connect_to_wifi();
+    // Initialize EmonLib for all inputs
+    //--------------------------//
+    module_1.current(ADC_PIN_1);
+    module_1.voltage(VCC_PIN_1);
+    
+    module_2.current(ADC_PIN_2);
+    module_2.voltage(VCC_PIN_2);
+    
+    module_3.current(ADC_PIN_3);
+    module_3.voltage(VCC_PIN_3);
+    
+    module_4.current(ADC_PIN_4);
+    module_4.voltage(VCC_PIN_4);
+    
+    module_5.current(ADC_PIN_5);
+    module_5.voltage(VCC_PIN_5);
+    //--------------------------//
+    
 }
