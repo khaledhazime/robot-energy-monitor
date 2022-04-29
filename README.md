@@ -27,29 +27,29 @@ These instructions will get you a copy of the project up and running on your own
 
 To install the ESP32 board in your Arduino IDE, follow these next instructions:
 1. In your Arduino IDE go to **File > Preferences** 
-![arduino-open-preferences](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-open-preferences.png)
+![arduino-open-preferences](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-open-preferences.png)
 
 2. Enter the following into the "Additional Board Manager URLs" field:
 ```
 https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 Then, click the "OK" button:
-![arduino-preferences](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-preferences.png)
+![arduino-preferences](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-preferences.png)
 
 3. Open the Boards Manager. Go to **Tools > Board > Boards Manager...**
-![arduino-boards-manager](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-boards-manager.png)
+![arduino-boards-manager](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-boards-manager.png)
 
 4. Search for **ESP32** and press install button for the "**ESP32 by Expressif Systems**"
-![arduino-esp32-board-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-esp32-board-installation.png)
+![arduino-esp32-board-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-esp32-board-installation.png)
 
 #### Arduino_JSON Library <a name = "arduino_json_library"></a>
 You also need to install the Arduino_JSON library. You can install this library in the Arduino IDE Library Manager. Just go to **Sketch > Include Library > Manage Libraries** and search for "**Arduino_JSON**"
-![arduino-json-library-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-json-library-installation.png)
+![arduino-json-library-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-json-library-installation.png)
 
 arduino-emonlib-library-installation
 #### EmonLib Library <a name = "emonlib_library"></a>
 You also need to install the EmonLib library. You can install this library in the Arduino IDE Library Manager. Just go to **Sketch > Include Library > Manage Libraries** and search for "**EmonLib**"
-![arduino-emonlib-library-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/master/config/img/arduino-emonlib-library-installation.png)
+![arduino-emonlib-library-installation](https://github.com/khaledhazime/robot-energy-monitor/blob/main/config/img/arduino-emonlib-library-installation.png)
 
 ## Usage <a name = "usage"></a>
 
