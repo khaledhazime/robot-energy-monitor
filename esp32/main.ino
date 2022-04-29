@@ -270,7 +270,7 @@ void loop(){
     print_module_data(module_3_data_avg, 3);
     print_module_data(module_4_data_avg, 4);
     print_module_data(module_5_data_avg, 5);
-    
+
     //--------------------------//
     // Measure time and wait for next measurement
     //--------------------------//
@@ -279,5 +279,10 @@ void loop(){
         // Do nothing
     }
     if(current_time - last_measure_time > measure_interval) last_measure_time = current_time;
+    
     //--------------------------//
+    // TODO: Deserialize data to json
+    // TODO: Create webserver to send data to client
+    //--------------------------//
+
 }
