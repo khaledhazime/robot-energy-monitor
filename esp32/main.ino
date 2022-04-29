@@ -2,6 +2,19 @@
 #include <WiFi.h>
 // #include <ArduinoJson.h>
 
+// Set the SSID and password for your network and calibration values before running the program.
+//----------------------------------------------------------------------------------------------------------------------//
+// Define WiFi credentials
+const char *WIFI_SSID = "network_name";
+const char *WIFI_PASSWORD = "network_password";
+
+// Define calibration values for modules
+const float adc_calibration = 0.0;
+const float vcc_calibration = 0.0;
+const float vcc_phase_shift = 0.0;
+//----------------------------------------------------------------------------------------------------------------------//
+
+
 // Define struct to hold the data of each module
 typedef struct{
     float voltage;
@@ -13,10 +26,6 @@ typedef struct{
     float irms;
 } module_data;
 
-// Define WiFi credentials
-const char *WIFI_SSID = "network_name";
-const char *WIFI_PASSWORD = "network_password";
-
 // Create instance of emonLib library
 EnergyMonitor module_1;
 EnergyMonitor module_2;
@@ -24,12 +33,6 @@ EnergyMonitor module_3;
 EnergyMonitor module_4;
 EnergyMonitor module_5;
 
-// Define calibration values for modules
-// TODO: Check if same calibration values work for all modules
-// TODO: Set calibration values
-const float adc_calibration = 0.0;
-const float vcc_calibration = 0.0;
-const float vcc_phase_shift = 0.0;
 
 // Define ADC inputs
 const int ADC_PIN_1 = 30;
@@ -279,7 +282,7 @@ void loop(){
         // Do nothing
     }
     if(current_time - last_measure_time > measure_interval) last_measure_time = current_time;
-    
+
     //--------------------------//
     // TODO: Deserialize data to json
     // TODO: Create webserver to send data to client
